@@ -44,8 +44,8 @@ function handleState() {
   let checkedRadioIndex = getCheckedRadioIndex();
   ratingText.innerHTML = checkedRadioIndex + 1;
   warningPopup.classList.add("hide");
-  ratingSection.classList.add("hide");
-  thankYouSection.classList.remove("hide");
+  ratingSection.classList.toggle("hide");
+  thankYouSection.classList.toggle("hide");
 }
 
 function handleWarning() {
