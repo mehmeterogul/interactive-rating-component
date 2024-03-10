@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Frontend Mentor | Interactive rating component</title>
+  </head>
+  <body>
+    <h1 class="hide">Welcome</h1>
+    <div role="main" class="container">
+      <div class="rating__wrapper">
+        <form action="#">
+          <img class="rating__icon" src="images/icon-star.svg" alt="" />
+          <h2 class="rating__heading">How did we do?</h2>
+          <p class="rating__description">
+            Please let us know how we did with your support request. All
+            feedback is appreciated to help us improve our offering!
+          </p>
+
+          <div class="radio-wrapper">
+            <label class="rating__radio-label" for="one">
+              <input
+                class="rating__radio"
+                type="radio"
+                name="rating"
+                id="one"
+              />
+              <span class="rating__text">1</span>
+              <span class="checkmark"></span>
+            </label>
+            <label class="rating__radio-label" for="two">
+              <input
+                class="rating__radio"
+                type="radio"
+                name="rating"
+                id="two"
+              />
+              <span class="checkmark"></span>
+              <span class="rating__text">2</span>
+            </label>
+            <label class="rating__radio-label" for="three">
+              <input
+                class="rating__radio"
+                type="radio"
+                name="rating"
+                id="three"
+              />
+              <span class="checkmark"></span>
+              <span class="rating__text">3</span>
+            </label>
+            <label class="rating__radio-label" for="four">
+              <input
+                class="rating__radio"
+                type="radio"
+                name="rating"
+                id="four"
+              />
+              <span class="checkmark"></span>
+              <span class="rating__text">4</span>
+            </label>
+            <label class="rating__radio-label" for="five">
+              <input
+                class="rating__radio"
+                type="radio"
+                name="rating"
+                id="five"
+              />
+              <span class="checkmark"></span>
+              <span class="rating__text">5</span>
+            </label>
+          </div>
+          <div class="button__wrapper">
+            <button class="button submit" type="submit" disabled>Submit</button>
+            <span class="button warning-handler">Submit</span>
+          </div>
+        </form>
+      </div>
+      <div class="thank-you__wrapper">
+        <img
+          class="thank-you__image"
+          src="./images/illustration-thank-you.svg"
+          alt=""
+        />
+        <p class="thank-you__rating">
+          You selected <span class="rating">0</span> out of 5
+        </p>
+        <h2 class="thank-you__heading">Thank you!</h2>
+        <p class="thank-you__description">
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don’t hesitate to get in touch!
+        </p>
+      </div>
+      <div class="warning-popup">Please select a rating before continue</div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="https://www.github.com/mehmeterogul">Mehmet Eroğul</a>.
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
