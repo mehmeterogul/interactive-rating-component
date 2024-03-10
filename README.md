@@ -27,7 +27,7 @@ Users should be able to:
 <img src="screenshots/desktop.png" height="250">
 <img src="screenshots/desktop-thankyou.png" height="250">
 <img src="screenshots/mobile.png" height="250">
-<img src="screenshots/mobile.png-thankyou" height="250">
+<img src="screenshots/mobile-thankyou.png" height="250">
 
 ### Links
 
