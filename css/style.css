@@ -41,6 +41,12 @@ body {
   position: relative;
 }
 
+h1 {
+  position: absolute;
+  top: 0;
+  color: var(--very-dark-blue);
+}
+
 .container {
   background: rgb(23, 30, 40);
   background: linear-gradient(
