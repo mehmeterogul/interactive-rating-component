@@ -202,7 +202,7 @@ body {
 
 .attribution {
   width: 100%;
-  position: absolute;
+  position: fixed;
   padding: 0.5rem 0;
   text-align: center;
   font-size: 0.625rem;

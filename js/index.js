@@ -1,27 +1,21 @@
-let ratingSection = document.querySelector(".rating__wrapper");
-let thankYouSection = document.querySelector(".thank-you__wrapper");
-
-let ratingText = document.querySelector(".rating");
-
-let radioButtons = document.getElementsByName("rating");
-let submitButton = document.querySelector(".submit");
-
-let warningHandler = document.querySelector(".warning-handler");
-let warningPopup = document.querySelector(".warning-popup");
+const radioButtons = document.getElementsByName("rating");
+const submitButton = document.querySelector(".submit");
+const warningHandler = document.querySelector(".warning-handler");
+const warningPopup = document.querySelector(".warning-popup");
 
 let canClickButton = true;
 
 init();
 
 function init() {
-  submitButton.addEventListener("click", handleState);
+  localStorage.clear();
+  submitButton.addEventListener("click", saveRating);
   warningHandler.addEventListener("click", handleWarning);
 
   radioButtons.forEach((radio) => {
     radio.addEventListener("click", disableWarning);
   });
 
-  thankYouSection.classList.add("hide");
   warningPopup.classList.add("hide");
 }
 
@@ -40,16 +34,13 @@ function getCheckedRadioIndex() {
   return checkedRadioIndex;
 }
 
-function handleState() {
-  let checkedRadioIndex = getCheckedRadioIndex();
-  ratingText.innerHTML = checkedRadioIndex + 1;
-  warningPopup.classList.add("hide");
-  ratingSection.classList.add("hide");
-  thankYouSection.classList.remove("hide");
+function saveRating() {
+  const checkedRadioIndex = getCheckedRadioIndex();
+  localStorage.setItem("rating", checkedRadioIndex + 1);
 }
 
 function handleWarning() {
-  let checkedRadioIndex = getCheckedRadioIndex();
+  const checkedRadioIndex = getCheckedRadioIndex();
 
   if (checkedRadioIndex === -1 && canClickButton) {
     canClickButton = false;
